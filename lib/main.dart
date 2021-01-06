@@ -51,6 +51,9 @@ class MyApp extends StatelessWidget {
                       'https://yt3.ggpht.com/ytc/AAUvwnj0Ok_dHgv_UY3sZrkMaWYgjKAPJQYlacK22k4IIg=s900-c-k-c0x00ffffff-no-rj',
                     ),
                   ),
+                  SizedBox(
+                    width: 8,
+                  ),
                   Column(
                     children: [
                       const Text(
