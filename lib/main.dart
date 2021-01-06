@@ -44,6 +44,13 @@ class MyApp extends StatelessWidget {
             children: [
               Row(
                 children: [
+                  SizedBox(
+                    width: 60,
+                    height: 60,
+                    child: Image.network(
+                      'https://yt3.ggpht.com/ytc/AAUvwnj0Ok_dHgv_UY3sZrkMaWYgjKAPJQYlacK22k4IIg=s900-c-k-c0x00ffffff-no-rj',
+                    ),
+                  ),
                   Column(
                     children: [
                       const Text(
@@ -52,7 +59,10 @@ class MyApp extends StatelessWidget {
                       FlatButton(
                         child: Row(
                           children: [
-                            Icon(Icons.video_call),
+                            Icon(
+                              Icons.video_call,
+                              color: Colors.red,
+                            ),
                             Text('登録する'),
                           ],
                         ),
@@ -61,9 +71,9 @@ class MyApp extends StatelessWidget {
                         },
                       ),
                     ],
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
           ),
         ),
