@@ -87,10 +87,33 @@ class MyApp extends StatelessWidget {
                   itemCount: items.length,
                   itemBuilder: (context, index) {
                     return ListTile(
+                      contentPadding: EdgeInsets.all(8),
                       leading: Image.network(
                         'https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg',
                       ),
-                      title: Text('Flutterリストを作る'),
+                      title: Column(
+                        children: [
+                          Text(
+                            'Flutterリストを作る',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                '200回再生',
+                                style: TextStyle(fontSize: 13),
+                              ),
+                              Text(
+                                '5日前',
+                                style: TextStyle(fontSize: 13),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      trailing: Icon(Icons.more_vert),
                     );
                   },
                 ),
