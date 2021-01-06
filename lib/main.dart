@@ -42,40 +42,43 @@ class MyApp extends StatelessWidget {
         body: Container(
           child: Column(
             children: [
-              Row(
-                children: [
-                  SizedBox(
-                    width: 60,
-                    height: 60,
-                    child: Image.network(
-                      'https://yt3.ggpht.com/ytc/AAUvwnj0Ok_dHgv_UY3sZrkMaWYgjKAPJQYlacK22k4IIg=s900-c-k-c0x00ffffff-no-rj',
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 60,
+                      height: 60,
+                      child: Image.network(
+                        'https://yt3.ggpht.com/ytc/AAUvwnj0Ok_dHgv_UY3sZrkMaWYgjKAPJQYlacK22k4IIg=s900-c-k-c0x00ffffff-no-rj',
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  Column(
-                    children: [
-                      const Text(
-                        'yorks view',
-                      ),
-                      FlatButton(
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.video_call,
-                              color: Colors.red,
-                            ),
-                            Text('登録する'),
-                          ],
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Column(
+                      children: [
+                        const Text(
+                          'yorks view',
                         ),
-                        onPressed: (){
+                        FlatButton(
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.video_call,
+                                color: Colors.red,
+                              ),
+                              Text('登録する'),
+                            ],
+                          ),
+                          onPressed: (){
 
-                        },
-                      ),
-                    ],
-                  ),
-                ],
+                          },
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
