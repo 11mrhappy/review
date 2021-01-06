@@ -90,7 +90,7 @@ class MyApp extends StatelessWidget {
                       onTap: () async {
                         await Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SecondRoute()),
+                          MaterialPageRoute(builder: (context) => VideoDetailPage()),
                         );
                       },
                       contentPadding: EdgeInsets.all(8),
