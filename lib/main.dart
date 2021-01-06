@@ -87,6 +87,12 @@ class MyApp extends StatelessWidget {
                   itemCount: items.length,
                   itemBuilder: (context, index) {
                     return ListTile(
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SecondRoute()),
+                        );
+                      },
                       contentPadding: EdgeInsets.all(8),
                       leading: Image.network(
                         'https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg',
