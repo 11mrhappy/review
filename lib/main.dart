@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  final items = List<String>.generate(20, (i) => "Item $i");
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -50,7 +52,7 @@ class MyApp extends StatelessWidget {
                       width: 60,
                       height: 60,
                       child: Image.network(
-                        'https://yt3.ggpht.com/ytc/AAUvwnj0Ok_dHgv_UY3sZrkMaWYgjKAPJQYlacK22k4IIg=s900-c-k-c0x00ffffff-no-rj',
+                        'https://tsukatte.com/wp-content/uploads/2020/03/pc_laptop.png',
                       ),
                     ),
                     const SizedBox(
@@ -78,6 +80,19 @@ class MyApp extends StatelessWidget {
                       ],
                     ),
                   ],
+                ),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: items.length,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      leading: Image.network(
+                        'https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg',
+                      ),
+                      title: Text('Flutterリストを作る'),
+                    );
+                  },
                 ),
               ),
             ],
